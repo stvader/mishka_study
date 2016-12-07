@@ -1,9 +1,19 @@
+@font-face {
+	font-family: OpenSansBold;
+	src: url(../fonts/opensansbold.woff2);
+}
+
+@font-face {
+	font-family: OpenSans;
+	src: url(../fonts/opensans.woff2);
+}
+
 body {
 	font-size: 16px;
-	line-height: 16px;
+	line-height: 18px;
 	font-family: Arial, sans-serif;
 	color: @black;
-	font-style: bold;
+	font-weight: bold;
 
 	background-color: @white;
 }
@@ -11,4 +21,29 @@ body {
 img {
 	max-width: 100%;
 	height: auto;
+}
+
+main {
+	.clearfix();
+	.container();
+
+	outline: 1px solid orange;	
+}
+
+.btn {
+	display: block;
+	width: 100%;
+	padding-top: 16px;
+	padding-bottom: 19px;
+	text-align: center;
+	border: 2px solid @brown;
+	box-sizing: border-box;
+
+	text-decoration: none;
+	font-family: "OpenSansBold";
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 16px;
+	color: @brown;
+	text-transform: uppercase;
 }

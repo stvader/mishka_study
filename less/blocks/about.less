@@ -1,0 +1,86 @@
+.about {
+	.clearfix();
+
+	width: 100%;	
+
+	outline: 1px solid red;
+
+
+	& h2 {
+		.out-indent();
+
+		font-family: @font-Verdana;
+		--font-weight: bold;
+		font-size: 24px;
+		line-height: 30px;
+		--color: @black;
+	}
+}
+
+.about__briefly-about {
+	padding-top: 30px;
+}
+
+.about__list {
+	.out-indent();
+	.ul_nostyle();
+}
+
+.about__item {
+	padding-top: 90px;
+
+	font-family: @font-Verdana;
+	--font-weight: bold;
+	--font-size: 16px;
+	--line-height: 18px;
+	--color: @black;
+}
+
+.about__reviews {
+	margin-top: 60px;
+}
+
+.about__review {
+	.out-indent();
+
+	margin-top: 35px;
+	margin-bottom: 20px;
+
+	font-family: "OpenSans";
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 30px;
+	color: @brown;
+}
+
+.about__autor-review {
+	font-family: "OpenSansBold";
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 30px;
+	color: @brown;
+	font-style: normal;
+}
+
+.about__nickname {
+	display: block;
+	font-family: "OpenSans";
+	font-weight: normal;
+	-font-style: italic;
+}
+
+.about__slider-control {
+	overflow: hidden;
+	border-top: 1px solid @pale-border;
+	border-bottom: 1px solid @pale-border;
+}
+
+.about__slide-arrow {
+	display: flex;
+	
+	
+	-height: 50px;
+	-width: 50%;
+	text-align: center;
+	vertical-align: center;	
+}
