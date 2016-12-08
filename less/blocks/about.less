@@ -1,7 +1,9 @@
 .about {
 	.clearfix();
 
-	width: 100%;	
+	width: 100%;
+	padding-bottom: 40px;
+	padding-top: 30px;	
 
 	outline: 1px solid red;
 
@@ -18,7 +20,7 @@
 }
 
 .about__briefly-about {
-	padding-top: 30px;
+	--padding-top: 30px;
 }
 
 .about__list {
@@ -71,16 +73,29 @@
 
 .about__slider-control {
 	overflow: hidden;
-	border-top: 1px solid @pale-border;
+	
 	border-bottom: 1px solid @pale-border;
 }
 
 .about__slide-arrow {
-	display: flex;
+	display: block;
+	float: left;
+	box-sizing: border-box;	
 	
-	
-	-height: 50px;
-	-width: 50%;
+	height: 50px;
+	width: 130px;
+	border: 1px solid @pale-border;
 	text-align: center;
-	vertical-align: center;	
+	line-height: 50px;
+	-font-size: 0;
+
+	& img {
+		vertical-align: middle;
+	}	
+}
+
+.about__slide-arrow--next {
+	float: right;
+	margin-left: -1px;
+	width: 131px;
 }
