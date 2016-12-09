@@ -8,7 +8,7 @@
 
 	background-color: @white;
 
-	outline: 1px solid black;
+	-outline: 1px solid black;
 }
 
 .week-product__name {
@@ -44,12 +44,12 @@
 	font-size: 14px;
 	line-height: 24px;
 	color: @brown;
-}
 
-.week-product__description p {
-	.out-indent();
+		p {
+		.out-indent();
 
-	margin-bottom: 15px;
+		margin-bottom: 15px;
+	}
 }
 
 .week-product__descr-table {
@@ -58,31 +58,33 @@
 	width: 100%;
 	line-height: 20px;
 	border-collapse: collapse;
+
+	& td {
+		.out-indent();
+
+		padding-top: 15px;
+		padding-bottom: 15px;
+		vertical-align: center;
+
+		border-bottom: 1px solid @pale-border;
+	}
 }
 
-.week-product__descr-table td {
-	.out-indent();
-
-	padding-top: 15px;
-	padding-bottom: 15px;
-	vertical-align: center;
-
-	border-bottom: 1px solid @pale-border;
-}
 
 .week-product__buying {
 	text-align: center;
+
+	& p {
+		.out-indent();
+
+		padding-top: 30px;
+		padding-bottom: 30px;
+
+		font-family: @font-Verdana;
+		font-weight: bold;
+		--font-size: 16px;
+		line-height: 24px;
+		color: @brown;
+	}
 }
 
-.week-product__buying p {
-	.out-indent();
-
-	padding-top: 30px;
-	padding-bottom: 30px;
-
-	font-family: @font-Verdana;
-	font-weight: bold;
-	--font-size: 16px;
-	line-height: 24px;
-	color: @brown;
-}
