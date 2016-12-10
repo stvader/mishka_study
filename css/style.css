@@ -436,6 +436,18 @@ main::after {
   display: table;
   clear: both;
 }
+@media (min-width: 768px) {
+  main {
+    width: 768px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media (min-width: 1200px) {
+  main {
+    width: 1150px;
+  }
+}
 .btn {
   display: block;
   width: 100%;
@@ -444,6 +456,7 @@ main::after {
   text-align: center;
   border: 2px solid #444444;
   box-sizing: border-box;
+  background-color: #ffffff;
   text-decoration: none;
   font-family: "OpenSansBold";
   font-weight: bold;
@@ -463,6 +476,18 @@ main::after {
   background-color: #ffffff;
   text-align: center;
   outline: 1px solid black;
+}
+@media (min-width: 768px) {
+  .page-header {
+    width: 768px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .page-header {
+    width: 1150px;
+  }
 }
 .page-header::after {
   content: "";
@@ -776,6 +801,18 @@ main::after {
   text-align: center;
   outline: 1px solid red;
 }
+@media (min-width: 768px) {
+  .page-footer {
+    width: 768px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .page-footer {
+    width: 1150px;
+  }
+}
 .page-footer__social {
   margin: 0;
   padding: 0;
@@ -862,4 +899,156 @@ main::after {
   font-family: "Verdana Bold", Verdana, Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
+}
+.process-produce {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  margin-bottom: 58px;
+  border: 1px solid #ececec;
+}
+.process-produce h2 {
+  margin: 0;
+  padding: 0;
+  padding-left: 90px;
+  margin-bottom: 25px;
+  font-family: "Verdana Bold", Verdana, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+.process-produce__descr {
+  margin: 0;
+  padding: 0;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 33px;
+  margin-right: 33px;
+  font-family: 'OpenSans';
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: #444444;
+}
+.process-produce__make-buy {
+  width: auto;
+  margin-left: 33px;
+  margin-right: 33px;
+}
+.form-main {
+  padding-bottom: 57px;
+}
+.form-main::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.form-main h2 {
+  margin: 0;
+  padding: 0;
+  padding-top: 70px;
+  padding-bottom: 80px;
+  margin-left: -30px;
+  margin-right: -30px;
+  -margin-bottom: 30px;
+  background-color: #f1f1f1;
+  border-top: 1px solid #ececec;
+  text-align: center;
+  font-family: "Verdana Bold", Verdana, Arial, sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+}
+.form-main p {
+  margin: 0;
+  padding: 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-family: "OpenSans";
+  font-weight: normal;
+  font-style: 15px;
+  line-height: 25px;
+  color: #444444;
+}
+.form-main__field {
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  border: none;
+  border-top: 1px solid #62d1ba;
+}
+.form-main__field legend {
+  width: 62px;
+  font-family: 'OpenSansBold';
+  font-size: 16.87px;
+  line-height: 16.87px;
+  color: #62d1ba;
+  text-transform: uppercase;
+}
+.form-main__field--email legend {
+  width: 80px;
+}
+label {
+  display: block;
+  height: 40px;
+  padding-left: 62px;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  box-sizing: border-box;
+  vertical-align: middle;
+  font-family: "Verdana Bold", Verdana, Arial, sans-serif;
+  font-size: 16.87px;
+  line-height: 18.98px;
+  cursor: pointer;
+  -outline: 1px solid green;
+}
+label div {
+  padding: 3% 0;
+}
+.form-main__field--type label {
+  margin-bottom: 20px;
+}
+.form-main__field--type label:last-child {
+  margin-bottom: 0;
+}
+input[type="radio"] {
+  display: none;
+}
+.form-main__field--color label {
+  margin-bottom: 25px;
+}
+.form-main__field--color label:last-child {
+  margin-bottom: 0;
+}
+input[type="checkbox"] {
+  display: none;
+}
+.form-main__field--name-surname label {
+  padding-left: 0;
+}
+input[type="text"] {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: none;
+  border-bottom: 2px solid #000000;
+  outline: none;
+  font-family: "Verdana";
+  font-weight: normal;
+  font-size: 16.87px;
+  line-height: 19px;
+  color: rgba(68, 68, 68, 0.3);
+}
+.form-main__field--others textarea {
+  -width: 260px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  border: 2px solid #444444;
+  padding: 15px;
+  -box-sizing: border-box;
+  resize: none;
+  overflow: hidden;
+  font-family: "Verdana";
+  font-weight: normal;
+  font-size: 16.87px;
+  line-height: 19px;
+  color: rgba(68, 68, 68, 0.3);
 }

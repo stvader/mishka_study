@@ -1,0 +1,149 @@
+.form-main {
+	.clearfix();
+
+	padding-bottom: 57px;
+
+	& h2 {
+		.out-indent();
+
+		padding-top: 70px;
+		padding-bottom: 80px;
+		margin-left: -30px;
+		margin-right: -30px;
+		-margin-bottom: 30px;
+
+		background-color: @bg-footer;
+		border-top: 1px solid @pale-border;
+
+		text-align: center;
+		font-family: @font-Verdana;
+		font-size: 24px;
+		line-height: 30px;
+	}
+
+	& p {
+		.out-indent();
+
+		padding-top: 25px;
+		padding-bottom: 25px;
+
+		font-family: "OpenSans";
+		font-weight: normal;
+		font-style: 15px;
+		line-height: 25px;
+		color: @brown;
+	}
+}
+
+.form-main__field {
+	.out-indent();
+
+	padding-top: 20px;
+	padding-bottom: 30px;
+
+	border: none;
+	border-top: 1px solid @tiffany-form;
+
+	& legend {
+		width: 62px;
+
+		font-family: 'OpenSansBold';
+		font-size: 16.87px;
+		line-height: 16.87px;
+		color: @tiffany-form;
+		text-transform: uppercase;
+	}
+
+	&--email {
+		& legend {
+			width: 80px;
+		}
+	}
+}
+
+label {
+	display: block;
+
+	height: 40px;
+	padding-left: 62px;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	box-sizing: border-box;
+	vertical-align: middle;
+
+	font-family: @font-Verdana;
+	font-size: 16.87px;
+	line-height: 18.98px;
+
+	cursor: pointer;
+
+	-outline: 1px solid green;
+
+	& div {
+		padding: 3% 0;
+	}
+}
+
+.form-main__field--type label {
+	margin-bottom: 20px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+input[type="radio"] {
+	display: none;
+}
+
+.form-main__field--color label {
+	margin-bottom: 25px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+input[type="checkbox"] {
+	display: none;
+}
+
+.form-main__field--name-surname label {
+	padding-left: 0;
+}
+
+input[type="text"] {
+	width: 100%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border: none;
+	border-bottom: 2px solid @black;
+	outline: none;
+
+	font-family: "Verdana";
+	font-weight: normal;
+	font-size: 16.87px;
+	line-height: 19px;
+	color: rgba(68, 68, 68, .3);
+}
+
+.form-main__field--others {
+	
+
+	& textarea {
+		-width: 260px;
+		margin-top: 15px;
+		margin-bottom: 25px;
+		border: 2px solid @brown;
+		padding: 15px;
+		-box-sizing: border-box;
+		resize: none;
+		overflow: hidden;
+
+		font-family: "Verdana";
+		font-weight: normal;
+		font-size: 16.87px;
+		line-height: 19px;
+		color: rgba(68, 68, 68, .3);
+	}
+}

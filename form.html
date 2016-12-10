@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Mishka Form</title>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<header class="page-header">
@@ -28,77 +29,77 @@
 			Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа, и мы свяжемся с вами, чтобы уточнить детали.
 		</p>
 		<form action="/" method="POST" class="form-main__form">
-			<fieldset class="form-main__type">
+			<fieldset class="form-main__field form-main__field--type">
 				<legend>Тип</legend>
 
 				<input type="radio" name="type" id="type_1">
 				<label for="type_1">					
-					Аксессуар для интерьера
+					<div>Аксессуар для интерьера</div>
 				</label>
 				<input type="radio" name="type" id="type_2">
 				<label for="type_2">
-					Детская игрушка
+					<div>Детская игрушка</div>
 				</label>
 			</fieldset>
 
-			<fieldset class="form-main__color">
+			<fieldset class="form-main__field form-main__field--color">
 				<legend>Цвет</legend>
 
 				<input type="checkbox" name="white" id="col_1" checked="true">
-				<label for="col_1">Белый</label>
+				<label for="col_1"><div>Белый</div></label>
 				<input type="checkbox" name="grey" id="col_2" checked="true">
-				<label for="col_2">Серый</label>
+				<label for="col_2"><div>Серый</div></label>
 				<input type="checkbox" name="tiffany" id="col_3">
-				<label for="col_3">"Тиффани"</label>
+				<label for="col_3"><div>"Тиффани"</div></label>
 				<input type="checkbox" name="black" id="col_4">
-				<label for="col_4">Черный</label>
+				<label for="col_4"><div>Черный</div></label>
 				<input type="checkbox" name="pink" id="col_5">
-				<label for="col_5">Розовый</label>
+				<label for="col_5"><div>Розовый</div></label>
 				<input type="checkbox" name="orange" id="col_6">
-				<label for="col_6">Оранжевый</label>
+				<label for="col_6"><div>Оранжевый</div></label>
 			</fieldset>
 
-			<fieldset class="form-main__name-surname">
+			<fieldset class="form-main__field form-main__field--name-surname">
 				<legend>ФИО</legend>
 
-				<label for="surname">Фамилия:</label>
+				<label for="surname"><div>Фамилия:</div></label>
 				<input type="text" name="" id="surname" value="Укажите фамилию">
-				<label for="name">Имя:</label>
+				<label for="name"><div>Имя:</div></label>
 				<input type="text" name="" id="name" value="Введите ваше имя">
-				<label for="patronimic-name">Отчество:</label>
+				<label for="patronimic-name"><div>Отчество:</div></label>
 				<input type="text" name="" id="patronimic-name" value="Отчество, если пожелаете">
 			</fieldset>
 
-			<fieldset class="form-main__phone-number">
+			<fieldset class="form-main__field form-main__field--phone-number">
 				<legend>Тел</legend>
 				<input type="text" name="phone-number" id="phone-number" value="+7 XXX XX XX">
 			</fieldset>
-			<fieldset class="form-main__email">
+
+			<fieldset class="form-main__field form-main__field--email">
 				<legend>E-mail</legend>
 				<input type="text" name="email" id="email" value="Ваш e-mail">
 			</fieldset>
-			<fieldset class="form-main__others">
-				<legend>Доп</legend>
-				<textarea name="" id="others" cols="30" rows="10">
-					Опишите все ваши пожелания к заказу
-				</textarea>
 
-				<input type="submit" value="Отправить заказ" class="form-main__submit  btn">
+			<fieldset class="form-main__field form-main__field--others">
+				<legend>Доп</legend>
+				<textarea name="" id="others" cols="21" rows="8">Опишите все ваши пожелания к заказу					
+				</textarea>				
 			</fieldset>
+			<input type="submit" value="Отправить заказ" class="form-main__submit  btn">
 		</form>
 	</main>
 
 	<footer class="page-footer">
 		<p class="page-footer__social">
 			<span class="social-links">
-				<a href="#" class="social-link  social-link--insta"></a>
-				<a href="#" class="social-link  social-link--fb"></a>
-				<a href="#" class="social-link  social-link--twitter"></a>
+				<a href="#" class="social-link  social-link--insta">in</a>
+				<a href="#" class="social-link  social-link--fb">fb</a>
+				<a href="#" class="social-link  social-link--twitter">tw</a>
 			</span>
 		</p>
 		<p class="page-footer__copyright">
 			Разработано:
-			<a href="" class="page-footer__copyright-link"></a>
+			<a href="" class="page-footer__copyright-link">HA</a>
 		</p>
 	</footer>
 </body>
