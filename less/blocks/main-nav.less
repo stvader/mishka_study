@@ -16,6 +16,10 @@
 	padding-bottom: 20px;
 	border-bottom: 1px solid @pale-border;
 	-text-align: center;
+	
+		a {
+			.hover-active();
+		}
 }
 
 .main-nav {
@@ -39,7 +43,7 @@
 }
 
 .main-nav--no-js {
-	& .main-nav__toggle {
+	.main-nav__toggle {
 		display: none;
 	}
 
@@ -49,7 +53,7 @@
 }
 
 .main-nav--closed {
-	& .main-nav__toggle::before {
+	.main-nav__toggle::before {
 		content: "";
 		position: absolute;
 		top:3px;
@@ -66,7 +70,7 @@
 }
 
 .main-nav--opened {
-	& .main-nav__toggle {
+	.main-nav__toggle {
 		&::before,
 		&::after {
 			content: "";
@@ -100,9 +104,9 @@
 
 .main-nav__list {
 	
-	& a {
+	a {
 		.a_nounderline();
-
+		
 		display: block;
 		padding-top: 30px;
 		padding-bottom: 34px;
@@ -115,6 +119,10 @@
 		font-size: 16px;
 		line-height: 24px;
 		color: @black;
+
+		&[href] {
+			.hover-active();
+		}
 	}
 }
 
@@ -125,7 +133,7 @@
 .main-nav__list--bonus {
 	right: 0;
 
-	& a {
+	a {
 		padding-top: 20px;
 
 		font-family: "Verdana";
@@ -137,15 +145,19 @@
 }
 
 .main-nav__list--news {
-	visibility: hidden;
+	display: none;
 
-	& a {
+	a {
 		padding-right: 60px;
 		font-size: 14px;
 	}	
 }
 
 @media @mobile-width-only {
+	.main-nav__wrapper {
+		overflow: hidden;
+	}
+
 	.mobile-visible {
 		visibility: visible;
 	}
@@ -155,7 +167,7 @@
 	}
 
 	.main-nav__list--bonus {
-		visibility: hidden;
+		display: none;
 	}	
 }
 
@@ -175,7 +187,7 @@
 		height: 90px;
 		line-height: 90px;
 
-		& img {
+		img {
 			vertical-align: middle;
 		}
 	}
@@ -186,23 +198,23 @@
 
 	.main-nav__list {
 		position: absolute;
+		z-index: 10;
 	}
 
 	.main-nav__item {
 		display: inline-block;
 
-		& a {
+		a {
 			margin: 0;
 			padding-top: 20px;
 			padding-bottom: 0;
 			border: none;
 		}
-
 	}
 
 	.main-nav__list--top {
 
-		& a {
+		a {
 			padding-top: 20px;
 			padding-right: 30px;
 
@@ -214,7 +226,7 @@
 		top: -60px;
 		right: 0;
 
-		& a {
+		a {
 			padding-left: 80px;
 			padding-top: 0;
 		}
@@ -225,20 +237,20 @@
 @media @desktop-width {
 	.page-header__logo {
 		text-align: center;
-		-padding-top: 8px;
-		-padding-bottom: 8px;
 	}
+
+	
 
 	.main-nav__list--top {
 		top: -80px;
 
-		& a {
+		a {
 			padding-right: 70px;
 			font-size: 16px;
 		}
 	}
 
 	.main-nav__list--news {
-		visibility: visible;
-	}
+		display: block;
+	}    
 }

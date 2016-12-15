@@ -2,8 +2,11 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Mishka Study</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	
 </head>
 <body>
 	<header class="page-header">
@@ -32,7 +35,7 @@
 					<li class="main-nav__item"><a href="#">Распродажа</a></li>
 				</ul>
 				<ul class="main-nav__list main-nav__list--bonus">
-					<li class="main-nav__item"><a href="#">Бесплатная доставка по России</a></li>
+					<li class="main-nav__item"><a>Бесплатная доставка по России</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -42,45 +45,65 @@
 		<section class="top">
 			<div class="top__slogan">
 				<h2>Милые штуки ручной  работы для дома</h2>
+				<!--div class="top__company-image">
+					<picture>
+						<source media="(min-width: 768px)" srcset="img/hero-desktop@1x.jpg">
+						<img src="img/hero-mobile@1x.jpg" alt="Мишки в домике">
+					</picture>	
+				</div-->
 			</div>
 			<div class="top__wrapper">
-				<div class="top__theme top__theme--1">
-					<p class="top__item">Предметы  интерьера</p>
-				</div>
-				<div class="top__theme top__theme--2">
-					<p class="top__item">Детские  игрушки</p>
-				</div>
+				<a class="top__theme top__theme--1">
+					Предметы<br> интерьера
+				</a>
+				<a class="top__theme top__theme--2">
+					Детские<br> игрушки					
+				</a>
 			</div>
 		</section>
 
 		<section class="week-product">
 			<h2 class="week-product__name">Вязаные корзинки</h2>
 			<span class="week-product__label">Товар недели</span>
-			<div class="week-product__description">
-				<p>
-					Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
-				</p>
-				<table class="week-product__descr-table">
-					<tr>
-						<td>Цвет:</td>
-						<td>"Тиффани"/серый</td>
-					</tr>
-					<tr>
-						<td>Диаметр:</td>
-						<td>25 см</td>
-					</tr>
-					<tr>
-						<td>Высота:</td>
-						<td>15 см</td>
-					</tr>
-				</table>
-			</div>
-			<div class="week-product__img">
-				<img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязанные корзинки">
-			</div>
-			<div class="week-product__buying">
-				<p class="week-product__price">Цена: 990руб.</p>
-				<a href="#" class="week-product__chapter  btn">Заказать</a>
+			<div class="week-product__container">
+				<div class="week-product__description">
+					<p>
+						Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
+					</p>
+					<table class="week-product__descr-table">
+						<tr>
+							<td>Цвет:</td>
+							<td>"Тиффани"/серый</td>
+						</tr>
+						<tr>
+							<td>Диаметр:</td>
+							<td>25 см</td>
+						</tr>
+						<tr>
+							<td>Высота:</td>
+							<td>15 см</td>
+						</tr>
+					</table>
+				</div>
+				<div class="week-product__img">
+					<picture>
+						<source
+							media="(min-width: 1150px)"
+							srcset="img/triple-set-desktop@2x.jpg 2x,
+									img/triple-set-desktop@1x.jpg 1x">
+
+						<source
+							media="(min-width: 768px)"
+							srcset="img/triple-set-tablet@2x.jpg 2x,
+									img/triple-set-tablet@1x.jpg 1x">
+
+						<img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязанные корзинки">
+					</picture>					
+				</div>
+				<div class="week-product__buying">
+					<p class="week-product__price">Цена: 990руб.</p>
+					<a href="#" class="week-product__chapter  btn">Заказать</a>
+				</div>
 			</div>
 		</section>
 
@@ -102,8 +125,8 @@
 					<p class="about__review">Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке и мои фотографии сразу стали более стильнее, а также набирают больше лайков!</p>
 					<cite class="about__autor-review">Анастасия Красильникова <span class="about__nickname">@misssssiskras</span></cite>
 					<div class="about__slider-control">
-						<a href="" class="about__slide-arrow about__slide-arrow--previus"><img src="img/icon-left-arrow.svg" alt="previus"></a>
-						<a href="" class="about__slide-arrow about__slide-arrow--next"><img src="img/icon-right-arrow.svg" alt="next"></a>
+						<a href="" class="about__slide-arrow about__slide-arrow--previus"><img src="img/icon/icon-left-arrow.svg" alt="previus"></a>
+						<a href="" class="about__slide-arrow about__slide-arrow--next"><img src="img/icon/icon-right-arrow.svg" alt="next"></a>
 					</div>
 				</div>
 				<a href="" class="about__write-review btn">Написать</a>
