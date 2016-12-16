@@ -24,7 +24,16 @@
 
 	font-family: @font-Verdana;
 	font-size: 18px;
-	line-height: 18px;
+	line-height: 30px;	
+}
+
+.page-footer__copyright-link {
+	-fill: @tiffany-light;
+	img {
+		vertical-align: middle;
+		padding-left: 25px;
+
+	}
 }
 
 @media @mobile-width-only {
@@ -37,14 +46,26 @@
 	.page-footer {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		align-items: center;		
 
-		padding-top: 40px;
-		padding-bottom: 50px;
+		padding-top: 45px;
+		padding-bottom: 45px;
 	}
 
+	.page-footer__logo,
 	.page-footer__social,
 	.page-footer__copyright {
 		padding: 0;
+		flex-basis: 200px;
 	}
+
+	.page-footer__logo {		
+		text-align: left;
+		
+	}
+
+	.page-footer__copyright {		
+		text-align: right;
+	}
+
 }

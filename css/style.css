@@ -922,7 +922,14 @@ main::after {
   padding-bottom: 32px;
   font-family: "Verdana Bold", Verdana, Arial, sans-serif;
   font-size: 18px;
-  line-height: 18px;
+  line-height: 30px;
+}
+.page-footer__copyright-link {
+  -fill: #63d1bb;
+}
+.page-footer__copyright-link img {
+  vertical-align: middle;
+  padding-left: 25px;
 }
 @media (max-width: 767px) {
   .page-footer__logo {
@@ -934,12 +941,20 @@ main::after {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 40px;
-    padding-bottom: 50px;
+    padding-top: 45px;
+    padding-bottom: 45px;
   }
+  .page-footer__logo,
   .page-footer__social,
   .page-footer__copyright {
     padding: 0;
+    flex-basis: 200px;
+  }
+  .page-footer__logo {
+    text-align: left;
+  }
+  .page-footer__copyright {
+    text-align: right;
   }
 }
 .page-catalog::after {
