@@ -40,7 +40,7 @@
 	font-size: 16px;
 	line-height: 18px;
 
-	outline: 1px solid red;
+	-outline: 1px solid red;
 
 	&::before {
 		content: "";
@@ -200,15 +200,23 @@
 		right: 50px;
 		width: 175px;		
 	}
+
+	@media @img-retina {
+		.about__reviews {
+			background-image: url('../img/review@2x.jpg');
+		}
+	}
 }
 
 @media @desktop-width {
 	.about {
-		margin-left: @margin-left-desktop;
+		
 
 	}
 
 	.about__briefly-about {
+		margin-left: @margin-left-desktop;
+
 		h2 {
 			font-size: 50px;
 			line-height: 57px;
@@ -216,11 +224,16 @@
 	}
 
 	.about__reviews {
-		padding-left: 0;
+		padding-left: 170px;
 		padding-right: 0;
 		margin-left: 0;
 		margin-right: 0;
 		-width: auto;
+
+		h2 {
+			font-size: 50px;
+			line-height: 57px;
+		}
 	}
 
 	.about__slider-control,

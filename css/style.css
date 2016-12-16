@@ -600,7 +600,7 @@ main::after {
   font-family: "Verdana Bold", Verdana, Arial, sans-serif;
   font-size: 16px;
   line-height: 18px;
-  outline: 1px solid red;
+  -outline: 1px solid red;
 }
 .about__item::before {
   content: "";
@@ -738,8 +738,13 @@ main::after {
     width: 175px;
   }
 }
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 1.5dppx) {
+  .about__reviews {
+    background-image: url('../img/review@2x.jpg');
+  }
+}
 @media (min-width: 1150px) {
-  .about {
+  .about__briefly-about {
     margin-left: 170px;
   }
   .about__briefly-about h2 {
@@ -747,11 +752,15 @@ main::after {
     line-height: 57px;
   }
   .about__reviews {
-    padding-left: 0;
+    padding-left: 170px;
     padding-right: 0;
     margin-left: 0;
     margin-right: 0;
     -width: auto;
+  }
+  .about__reviews h2 {
+    font-size: 50px;
+    line-height: 57px;
   }
   .about__slider-control,
   .about__write-review {
@@ -759,9 +768,9 @@ main::after {
   }
 }
 .contacts {
-  width: 100%;
-  padding-top: 40px;
-  padding-bottom: 38px;
+  -width: 100%;
+  margin-top: 40px;
+  margin-bottom: 38px;
   -outline: 1px solid black;
 }
 .contacts::after {
@@ -800,6 +809,83 @@ main::after {
   margin-right: -30px;
   margin-bottom: 37px;
 }
+@media (min-width: 768px) {
+  .contacts {
+    margin-top: 60px;
+    margin-bottom: 55px;
+  }
+  .contacts h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .contacts__table {
+    display: block;
+    width: auto;
+    font-size: 16px;
+  }
+  .contacts__table::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .contacts__table tbody {
+    display: block;
+  }
+  .contacts__table tr {
+    display: block;
+    float: left;
+    width: 50%;
+  }
+  .contacts__table td {
+    display: block;
+    float: left;
+    width: auto;
+  }
+  .contacts__table td:first-child {
+    width: 70px;
+  }
+  .contacts__map {
+    margin-left: -50px;
+    margin-right: -50px;
+    margin-bottom: 55px;
+  }
+  .contacts__write-button {
+    width: 230px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 1150px) {
+  .contacts {
+    position: relative;
+    margin-top: 70px;
+    margin-bottom: 105px;
+    margin-left: 170px;
+    padding-right: 530px;
+    padding-top: 60px;
+  }
+  .contacts h2 {
+    -margin-top: 60px;
+    margin-bottom: 60px;
+    font-size: 50px;
+    line-height: 57px;
+  }
+  .contacts__table {
+    margin-bottom: 55px;
+  }
+  .contacts__table tr {
+    width: auto;
+  }
+  .contacts__map {
+    position: absolute;
+    top: 0;
+    right: 50px;
+    z-index: 1;
+  }
+  .contacts__write-button {
+    margin: 0;
+  }
+}
 .page-footer {
   width: 320px;
   margin: 0 auto;
@@ -837,6 +923,24 @@ main::after {
   font-family: "Verdana Bold", Verdana, Arial, sans-serif;
   font-size: 18px;
   line-height: 18px;
+}
+@media (max-width: 767px) {
+  .page-footer__logo {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .page-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+  .page-footer__social,
+  .page-footer__copyright {
+    padding: 0;
+  }
 }
 .page-catalog::after {
   content: "";

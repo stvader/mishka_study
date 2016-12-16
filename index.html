@@ -15,8 +15,7 @@
 				<source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
 				<source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
 				<img src="img/logo-mobile.svg" alt="Мишка">
-			</picture>			
-			
+			</picture>				
 		</div>
 		<nav class="main-nav  main-nav--closed main-nav--no-js">
 			<button class="main-nav__toggle js-menu-toggle" type="button"></button>
@@ -44,13 +43,7 @@
 	<main>
 		<section class="top">
 			<div class="top__slogan">
-				<h2>Милые штуки ручной  работы для дома</h2>
-				<!--div class="top__company-image">
-					<picture>
-						<source media="(min-width: 768px)" srcset="img/hero-desktop@1x.jpg">
-						<img src="img/hero-mobile@1x.jpg" alt="Мишки в домике">
-					</picture>	
-				</div-->
+				<h2>Милые штуки ручной  работы для дома</h2>				
 			</div>
 			<div class="top__wrapper">
 				<a class="top__theme top__theme--1">
@@ -146,13 +139,28 @@
 				</tr>
 			</table>
 			<div class="contacts__map">
-				<img src="img/map-mobile@1x.jpg" alt="Map" width="320" height="457">
+				<picture>
+					<source
+						media="(min-width: 1150px)"
+						srcset="img/map-desktop@2x.jpg 2x,
+								img/map-desktop@1x.jpg 1x">
+
+					<source
+						media="(min-width: 768px)"
+						srcset="img/map-tablet@2x.jpg 2x,
+								img/map-tablet@1x.jpg 1x">
+
+					<img src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Map">
+				</picture>				
 			</div>
 			<a href="#" class="contacts__write-button  btn">Напишите нам</a>
 		</section>
 	</main>	
 
 	<footer class="page-footer">
+		<div class="page-footer__logo">
+			<img src="img/logo-footer.svg" alt="Мишка">
+		</div>
 		<p class="page-footer__social">
 			<span class="social-links">
 				<a href="#" class="social-link  social-link--insta">in</a>

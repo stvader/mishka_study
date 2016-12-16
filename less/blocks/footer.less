@@ -26,3 +26,25 @@
 	font-size: 18px;
 	line-height: 18px;
 }
+
+@media @mobile-width-only {
+	.page-footer__logo {
+		display: none;
+	}
+}
+
+@media @tablet-width {
+	.page-footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		padding-top: 40px;
+		padding-bottom: 50px;
+	}
+
+	.page-footer__social,
+	.page-footer__copyright {
+		padding: 0;
+	}
+}
