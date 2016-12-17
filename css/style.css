@@ -17,6 +17,7 @@ body {
 img {
   max-width: 100%;
   height: auto;
+  vertical-align: bottom;
 }
 main {
   width: 320px;
@@ -67,6 +68,12 @@ main::after {
 }
 .btn:active {
   color: rgba(255, 255, 255, 0.3);
+}
+picture {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-style: none;
 }
 .page-header {
   width: 320px;
@@ -120,12 +127,10 @@ main::after {
   background-color: #ffffff;
   cursor: pointer;
 }
-.main-nav--no-js {
-  /*& .main-nav__list {
-		display: block;
-	}*/
+.main-nav__wrapper {
+  overflow: hidden;
 }
-.main-nav--no-js .main-nav__toggle {
+.main-nav--closed .main-nav__list {
   display: none;
 }
 .main-nav--closed .main-nav__toggle::before {
@@ -154,6 +159,12 @@ main::after {
 }
 .main-nav--opened .main-nav__toggle::after {
   transform: rotate(-45deg);
+}
+.main-nav--no-js .main-nav__toggle {
+  display: none;
+}
+.main-nav--no-js .main-nav__list {
+  display: block;
 }
 .main-nav__list {
   list-style: none;
@@ -184,12 +195,14 @@ main::after {
   opacity: .3;
 }
 .mobile-visible {
-  visibility: hidden;
+  -visibility: hidden;
 }
-.main-nav__list--bonus {
+.main-nav .main-nav__list--bonus {
+  /*main-nav for cascade*/
+  display: none;
   right: 0;
 }
-.main-nav__list--bonus a {
+.main-nav .main-nav__list--bonus a {
   padding-top: 20px;
   font-family: "Verdana";
   font-weight: normal;
@@ -197,26 +210,13 @@ main::after {
   line-height: 24px;
   color: #444444;
 }
-.main-nav__list--news {
+.main-nav .main-nav__list--news {
+  /*main-nav for cascade*/
   display: none;
 }
-.main-nav__list--news a {
+.main-nav .main-nav__list--news a {
   padding-right: 60px;
   font-size: 14px;
-}
-@media (max-width: 767px) {
-  .main-nav__wrapper {
-    overflow: hidden;
-  }
-  .mobile-visible {
-    visibility: visible;
-  }
-  .main-nav--closed .main-nav__list {
-    display: none;
-  }
-  .main-nav__list--bonus {
-    display: none;
-  }
 }
 @media (min-width: 768px) {
   .page-header {
@@ -251,6 +251,9 @@ main::after {
     padding-bottom: 0;
     border: none;
   }
+  .main-nav .main-nav__list {
+    display: block;
+  }
   .main-nav__list--top a {
     padding-top: 20px;
     padding-right: 30px;
@@ -264,6 +267,17 @@ main::after {
     padding-left: 80px;
     padding-top: 0;
   }
+  .main-nav .main-nav__list--bonus {
+    /*.main-nav foe cascade*/
+    display: block;
+  }
+  .main-nav .main-nav__list--news {
+    /*main-nav for cascade*/
+    display: none;
+  }
+  .mobile-visible {
+    font-size: 0;
+  }
 }
 @media (min-width: 1150px) {
   .page-header__logo {
@@ -276,7 +290,8 @@ main::after {
     padding-right: 70px;
     font-size: 16px;
   }
-  .main-nav__list--news {
+  .main-nav .main-nav__list--news {
+    /*.main-nav for cascade*/
     display: block;
   }
 }
@@ -953,6 +968,9 @@ main::after {
   .page-footer__logo {
     text-align: left;
   }
+  .page-footer__logo :hover {
+    cursor: pointer;
+  }
   .page-footer__copyright {
     text-align: right;
   }
@@ -996,14 +1014,14 @@ main::after {
 }
 .price-list__description {
   text-align: left;
-  padding-left: 25px;
-  padding-right: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 .price-list__product-name {
   margin: 0;
   padding: 0;
-  padding-top: 20px;
-  padding-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   font-family: "Verdana Bold", Verdana, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -1011,8 +1029,7 @@ main::after {
 .price-list__product_descr {
   margin: 0;
   padding: 0;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #ececec;
+  margin-bottom: 20px;
   font-family: "OpenSans";
   font-weight: normal;
   font-size: 14px;
@@ -1024,20 +1041,21 @@ main::after {
   padding: 0;
   padding-top: 20px;
   padding-bottom: 20px;
+  border-top: 1px solid #ececec;
   font-family: "Verdana Bold", Verdana, Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
 }
 .process-produce {
-  padding-top: 20px;
   padding-bottom: 30px;
   margin-bottom: 58px;
   border: 1px solid #ececec;
 }
-.process-produce h2 {
+.process-produce__header {
   margin: 0;
   padding: 0;
   padding-left: 90px;
+  margin-top: 20px;
   margin-bottom: 25px;
   font-family: "Verdana Bold", Verdana, Arial, sans-serif;
   font-size: 16px;
@@ -1060,6 +1078,67 @@ main::after {
   width: auto;
   margin-left: 33px;
   margin-right: 33px;
+}
+@media (min-width: 768px) {
+  .catalog-header {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    margin-left: -50px;
+    margin-right: -50px;
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .price-list {
+    padding-top: 75px;
+  }
+  .price-list__card {
+    position: relative;
+    margin-bottom: 55px;
+  }
+  .price-list__description {
+    margin-left: 354px;
+    margin-right: 35px;
+  }
+  .price-list__img {
+    float: left;
+  }
+  .price-list__product-name {
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+  .price-list__product_descr {
+    margin-bottom: 190px;
+    font-size: 15px;
+  }
+  .price-list__price {
+    position: absolute;
+    bottom: 0;
+    font-size: 16px;
+  }
+  .process-produce {
+    position: relative;
+    padding-bottom: 45px;
+    margin-bottom: 65px;
+  }
+  .process-produce__header {
+    position: absolute;
+    top: 454px;
+    width: auto;
+    margin-top: 35px;
+    font-size: 18px;
+  }
+  .process-produce__descr {
+    margin-top: 90px;
+    margin-bottom: 35px;
+    margin-right: 40px;
+    margin-left: 40px;
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .process-produce__make-buy {
+    margin-right: 40px;
+    margin-left: 40px;
+  }
 }
 .form-main {
   padding-bottom: 57px;

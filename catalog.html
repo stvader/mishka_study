@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Mishka Catalog</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
@@ -43,7 +44,21 @@
 		<h2 class="catalog-header">Каталог товаров</h2>
 		<section class="price-list">
 			<div class="price-list__card">
-				<div class="price-list__img"><img src="img/photo-1-mobile@1x.jpg" alt="Зайчик-попрыгайчик" width="260" height="195"></div>
+				<div class="price-list__img">
+					<picture>
+						<source
+							media="(min-width: 1150px)"
+							srcset="img/photo-1-desktop@2x.jpg 2x,
+									img/photo-1-desktop@1x.jpg 1x">
+
+						<source
+							media="(min-width: 768px)"
+							srcset="img/photo-1-tablet@2x.jpg 2x,
+									img/photo-1-tablet@1x.jpg 1x">
+
+						<img src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик">
+					</picture>					
+				</div>
 				<div class="price-list__description">
 					<h3 class="price-list__product-name">Зайчик-попрыгайчик</h3>
 					<p class="price-list__product_descr">Рост 30 см, вес 200г</p>
@@ -51,7 +66,22 @@
 				</div>
 			</div>
 			<div class="price-list__card">
-				<div class="price-list__img"><img src="img/photo-2-mobile@1x.jpg" alt="Корзинка для белья" width="260" height="195"></div>
+				<div class="price-list__img">
+					<picture>
+						<source
+							media="(min-width: 1150px)"
+							srcset="img/photo-2-desktop@2x.jpg 2x,
+									img/photo-2-desktop@1x.jpg 1x">
+
+						<source
+							media="(min-width: 768px)"
+							srcset="img/photo-2-tablet@2x.jpg 2x,
+									img/photo-2-tablet@1x.jpg 1x">
+
+						<img src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="Корзинка">
+					</picture>	
+					
+				</div>
 				<div class="price-list__description">
 					<h3 class="price-list__product-name">Корзинка для белья</h3>
 					<p class="price-list__product_descr">Диаметр 15 см, высота 10см</p>
@@ -59,7 +89,21 @@
 				</div>
 			</div>
 			<div class="price-list__card">
-				<div class="price-list__img"><img src="img/photo-3-mobile@1x.jpg" alt="Корзинка для игрушек" width="260" height="195"></div>
+				<div class="price-list__img">
+					<picture>
+						<source
+							media="(min-width: 1150px)"
+							srcset="img/photo-3-desktop@2x.jpg 2x,
+									img/photo-3-desktop@1x.jpg 1x">
+
+						<source
+							media="(min-width: 768px)"
+							srcset="img/photo-3-tablet@2x.jpg 2x,
+									img/photo-3-tablet@1x.jpg 1x">
+
+						<img src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Большая корзинка">
+					</picture>	
+				</div>
 				<div class="price-list__description">
 					<h3 class="price-list__product-name">Большая корзинка для игрушек</h3>
 					<p class="price-list__product_descr">Диаметр 30 см, высота 30 см</p>
@@ -68,9 +112,22 @@
 			</div>
 		</section>
 		<section class="process-produce">
-			<h3>Процесс производства</h3>
+			<h3 class="process-produce__header">Процесс производства</h3>
 			<div class="process-produce__video">
-				<img src="img/video-mobile@1x.jpg" alt="Video" width="260" height="150">
+				<picture>
+					<source
+						media="(min-width: 1150px)"
+						srcset="img/video-desktop@2x.jpg 2x,
+								img/video-desktop@1x.jpg 1x">
+
+					<source
+						media="(min-width: 768px)"
+						srcset="img/video-tablet@2x.jpg 2x,
+								img/video-tablet@1x.jpg 1x">
+
+					<img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Video">
+				</picture>	
+				
 			</div>
 			<p class="process-produce__descr">
 				По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
@@ -80,6 +137,9 @@
 	</main>
 
 	<footer class="page-footer">
+		<div class="page-footer__logo">
+			<img src="img/logo-footer.svg" alt="Мишка">
+		</div>
 		<p class="page-footer__social">
 			<span class="social-links">
 				<a href="#" class="social-link  social-link--insta">in</a>
@@ -89,8 +149,12 @@
 		</p>
 		<p class="page-footer__copyright">
 			Разработано:
-			<a href="" class="page-footer__copyright-link">HA</a>
+			<a href="" class="page-footer__copyright-link">
+				<img src="img/logo-htmlacademy.svg" alt="HTML Academy">
+			</a>
 		</p>
 	</footer>
+
+	<script src="js/js-menu-mobile.js"></script>
 </body>
 </html>

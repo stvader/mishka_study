@@ -1,7 +1,5 @@
 .page-catalog {
-	.clearfix();
-
-	
+	.clearfix();	
 }
 
 .catalog-header {
@@ -37,16 +35,16 @@
 
 .price-list__description {
 	text-align: left;
-	padding-left: 25px;
-	padding-right: 25px;
+	margin-left: 25px;
+	margin-right: 25px;
 
 }
 
 .price-list__product-name {
 	.out-indent();
 
-	padding-top: 20px;
-	padding-bottom: 10px;
+	margin-top: 20px;
+	margin-bottom: 10px;
 
 	font-family: @font-Verdana;
 	font-size: 16px;
@@ -56,8 +54,7 @@
 .price-list__product_descr {
 	.out-indent();
 
-	padding-bottom: 20px;
-	border-bottom: 1px solid @pale-border;
+	margin-bottom: 20px;	
 
 	font-family: "OpenSans";
 	font-weight: normal;
@@ -71,6 +68,7 @@
 
 	padding-top: 20px;
 	padding-bottom: 20px;
+	border-top: 1px solid @pale-border;
 
 	font-family: @font-Verdana;
 	font-size: 14px;
@@ -78,22 +76,24 @@
 }
 
 .process-produce {
-	padding-top: 20px;
+	
 	padding-bottom: 30px;
 	margin-bottom: 58px;
 	border: 1px solid @pale-border;
-
-	& h2 {
-		.out-indent();
-
-		padding-left: 90px;
-		margin-bottom: 25px;
-
-		font-family: @font-Verdana;
-		font-size: 16px;
-		line-height: 24px;		
-	}
 }
+
+.process-produce__header {
+	.out-indent();
+
+	padding-left: 90px;
+	margin-top: 20px;
+	margin-bottom: 25px;
+
+	font-family: @font-Verdana;
+	font-size: 16px;
+	line-height: 24px;		
+}
+
 
 .process-produce__descr {
 	.out-indent();
@@ -114,4 +114,80 @@
 	width: auto;
 	margin-left: 33px;
 	margin-right: 33px;
+}
+
+@media @tablet-width {
+	.catalog-header {
+		padding-top: 90px;
+		padding-bottom: 90px;
+		margin-left: -50px;
+		margin-right: -50px;
+
+		font-size: 40px;
+		line-height: 50px;
+	}
+
+	.price-list {
+		padding-top: 75px;
+	}
+
+	.price-list__card {
+		position: relative;
+		margin-bottom: 55px;
+	}
+
+	.price-list__description {
+		margin-left: 354px;
+		margin-right: 35px;
+	}
+
+	.price-list__img {
+		float: left;		
+	}
+
+	.price-list__product-name {
+		margin-bottom: 5px;
+		font-size: 18px;
+	}
+
+	.price-list__product_descr {
+		margin-bottom: 190px;
+		font-size: 15px;
+	}
+
+	.price-list__price {
+		position: absolute;
+		bottom: 0;
+		font-size: 16px;
+	}
+
+	.process-produce {
+		position: relative;
+		padding-bottom: 45px;
+		margin-bottom: 65px;
+	}
+
+	.process-produce__header {
+		position: absolute;
+		top: 454px;
+		width: auto;
+
+		margin-top: 35px;
+
+		font-size: 18px;
+	}
+
+	.process-produce__descr {
+		margin-top: 90px;
+		margin-bottom: 35px;
+		margin-right: 40px;
+		margin-left: 40px;
+		font-size: 16px;
+		line-height: 30px;
+	}
+
+	.process-produce__make-buy {
+		margin-right: 40px;
+		margin-left: 40px;
+	}
 }
