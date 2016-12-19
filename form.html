@@ -43,7 +43,7 @@
 	<main class="form-main">
 		<h2>Вязание на заказ</h2>
 		<p>
-			Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа, и мы свяжемся с вами, чтобы уточнить детали.
+			Мы будем рады воплотить в жизнь ваши пожелания!<br class="mobile-invisible"> Заполните простую форму заказа, и мы свяжемся с вами, чтобы уточнить детали.
 		</p>
 		<form action="/" method="POST" class="form-main__form">
 			<fieldset class="form-main__field form-main__field--type">
@@ -79,27 +79,27 @@
 			<fieldset class="form-main__field form-main__field--name-surname">
 				<legend>ФИО</legend>
 
-				<label for="surname"><div>Фамилия:</div></label>
-				<input type="text" name="" id="surname" value="Укажите фамилию">
-				<label for="name"><div>Имя:</div></label>
-				<input type="text" name="" id="name" value="Введите ваше имя">
-				<label for="patronimic-name"><div>Отчество:</div></label>
-				<input type="text" name="" id="patronimic-name" value="Отчество, если пожелаете">
+				<label for="surname"><div>Фамилия:</div><input type="text" name="" id="surname" placeholder="Укажите фамилию"></label>
+				
+				<label for="name"><div>Имя:</div><input type="text" name="" id="name" placeholder="Введите ваше имя"></label>
+				
+				<label for="patronimic-name"><div>Отчество:</div><input type="text" name="" id="patronimic-name" placeholder="Отчество, если пожелаете"></label>
+				
 			</fieldset>
 
 			<fieldset class="form-main__field form-main__field--phone-number">
 				<legend>Тел</legend>
-				<input type="text" name="phone-number" id="phone-number" value="+7 XXX XX XX">
+				<input type="text" name="phone-number" id="phone-number" placeholder="+7 XXX XX XX">
 			</fieldset>
 
 			<fieldset class="form-main__field form-main__field--email">
 				<legend>E-mail</legend>
-				<input type="text" name="email" id="email" value="Ваш e-mail">
+				<input type="text" name="email" id="email" placeholder="Ваш e-mail">
 			</fieldset>
 
 			<fieldset class="form-main__field form-main__field--others">
 				<legend>Доп</legend>
-				<textarea name="" id="others" cols="21" rows="8">Опишите все ваши пожелания к заказу					
+				<textarea name="" id="others" cols="21" rows="8" placeholder="Опишите все ваши пожелания к заказу">					
 				</textarea>				
 			</fieldset>
 			<input type="submit" value="Отправить заказ" class="form-main__submit  btn">
