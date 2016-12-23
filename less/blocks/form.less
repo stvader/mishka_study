@@ -86,6 +86,7 @@ label {
 
 .form-main__field--type label {
 	margin-bottom: 20px;
+	padding-top: 7px;
 	position: relative;
 
 	&:last-child {
@@ -238,7 +239,9 @@ input[type="text"] {
 	.form-main {
 		h2 {
 			padding-top: 90px;
-			padding-bottom: 70px;
+			padding-bottom: 90px;
+			margin-left: -50px;
+			margin-right: -50px;
 
 			font-size: 40px;
 			line-height: 50px;
@@ -255,6 +258,7 @@ input[type="text"] {
 
 	label {
 		font-size: 18px;
+		height: 50px;
 	}
 
 	.form-main__field {
@@ -273,12 +277,20 @@ input[type="text"] {
 
 		&--type {
 			label {
+				padding-top: 18px;
+				padding-left: 80px;
+
 				&::before {
-					top: 5px;
+					top: 0px;
+					width: 50px;
+					height: 50px;
 				}
 
 				&::after {
-					top: 19px;
+					top: 17px;
+					left: 17px;
+					width: 20px;
+					height: 20px;
 				}
 			}
 		}
@@ -299,10 +311,12 @@ input[type="text"] {
 
 		&--color {
 			padding-bottom: 35px;
+				
 			
 			label {
 				display: inline-block;
 				width: 220px;
+				padding-left: 80px;
 
 				&:last-child {
 					margin-bottom: 25px;
@@ -310,24 +324,35 @@ input[type="text"] {
 
 				&::before {
 					top: 0;
+					width: 50px;
+					height: 50px;
+
 				}
+				    
 			}
 		}
 		&--name-surname {
 			label {
-				display: table;
+				.clearfix();
+				display: flex;
+				-justify-content: space-between;
+				align-items: center;
 				width: 100%;
-				
-				div {
-					display: table-cell;
-					width: auto;
-					
+				height: 50px;
+				margin-top: 0;
+				margin-bottom: 15px;
 
-				}
+			}
 
-				input {
-					display: table-cell;										
-				}
+			.form-main__name-form {
+				-display: inline;
+				-float: left;
+				padding-right: 25px;
+			}
+
+			.inner-table-cell {
+				flex-grow: 1;
+				-display: inline;									
 			}
 		}
 
@@ -341,8 +366,14 @@ input[type="text"] {
 			legend {
 				top: 40px;
 			}
+
+			
 		}
 	}/*end fields*/
+	input[type="checkbox"]:checked + label::before {
+		background-size: 36px 30px;
+    	background-position: 8px 9px;
+	}
 
 	input[type="text"] {
 		padding-left: 15px;
@@ -357,10 +388,97 @@ input[type="text"] {
 	}
 
 	.form-main__submit {
+		float: left;
 		width: auto;
 		padding-left: 35px;
 		padding-right: 35px;
 	}
 	
-	
+	.form-main__instrution {
+		display: block;
+		float: right;
+		padding-top: 10px;
+
+		font-family: "OpenSans";
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 30px;
+		color: @brown;
+	}	
+}
+
+@media @desktop-width {
+	.form-main {
+		h2 {
+			padding-top: 100px;
+			padding-bottom: 100px;
+
+			font-size: 50px;
+			line-height: 57px;
+		}
+
+		p {
+			margin-top: 115px;
+			margin-left: 60px;
+		}
+
+		
+
+	}
+
+	.form-main__field {
+		-padding-left: 170px;
+
+		legend {
+			-display: block;
+			left: 50px;
+			width: 55px;
+			text-align: center;
+
+		}
+
+		&--color,
+		&--phone-number,
+		&--email {
+			legend {
+				left: 100px;
+			}
+		}
+
+		&--phone-number,
+		&--email {
+			padding-right: 225px;
+		}
+
+		&--name-surname,		
+		&--others {
+			margin-right: 175px;
+		}
+
+		&--color {
+			label {
+				width: 265px;
+			}
+		}
+
+		
+
+		&--name-surname {
+			label {
+				-height: 50px;
+			}
+		}
+	}
+
+	label {
+		-height: 50px;
+	}
+
+	.form-main__submit {
+		margin-left: 160px;
+	}
+
+	.form-main__instrution {
+		margin-right: 170px;
+	}
 }

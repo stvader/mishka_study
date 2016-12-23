@@ -42,16 +42,25 @@
 
 	-outline: 1px solid red;
 
-	&::before {
-		content: "";
-		display: block;
+	div {
+		-content: "";
+		-display: block;
 		position: absolute;
 		top: 30px;
 		left: 0;
 		width: 50px;
 		height: 40px;
-		background-color: green;
+		-background-color: green;
 		z-index: 1;
+		line-height: 40px;
+		text-align: center;
+	}
+
+	svg {
+		-display: block;
+		-margin: 0 auto;
+		vertical-align: middle;
+		fill: @tiffany-light;
 	}	
 }
 
@@ -201,7 +210,7 @@
 		width: 175px;		
 	}
 
-	@media @img-retina {
+	@media @img-retina-dpi, @img-retina-dppx {
 		.about__reviews {
 			background-image: url('../img/review@2x.jpg');
 		}
