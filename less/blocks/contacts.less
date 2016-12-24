@@ -18,6 +18,10 @@
 	}
 }
 
+.contacts__flag {
+	display: none;
+}
+
 .contacts__table {
 	width: 100%;
 	border-collapse: collapse;
@@ -84,6 +88,7 @@
 
 @media @tablet-width {
 	.contacts {
+		position: relative;
 		margin-top: 60px;
 		margin-bottom: 55px;
 
@@ -91,6 +96,16 @@
 			font-size: 40px;
 			line-height: 50px;
 		}
+	}
+
+	.contacts__flag {
+		display: block;
+		position: absolute;
+		top: -20px;
+		right: 0;
+		width: 45px;
+		height: 85px;
+		z-index: 20;
 	}
 
 	.contacts__table {
@@ -133,6 +148,11 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
+
+	.contacts__map-pin {
+		bottom: 180px;
+    	left: 355px;
+	}
 }
 
 @media @desktop-width {
@@ -153,6 +173,11 @@
 		}
 	}
 
+	.contacts__flag {
+		left: -120px;
+		top: 60px;
+	}
+
 	.contacts__table {
 		margin-bottom: 55px;
 
@@ -170,5 +195,9 @@
 
 	.contacts__write-button {
 		margin: 0;
+	}
+
+	.contacts__map-pin {
+		left: 250px;
 	}
 }
