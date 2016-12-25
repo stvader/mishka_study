@@ -164,8 +164,6 @@ label:active::before {
 	border-color: @form-down;
 }
 
-
-
 .form-main__field--name-surname label {
 	padding-left: 0;
 	margin-top: 10px;
@@ -195,6 +193,39 @@ input[type="text"] {
 	
 	&:invalid {
 		border-bottom-color: @form-invalid;
+	}
+}
+
+.form-main__field--phone-number,
+.form-main__field--email {
+	position: relative;
+
+	input {
+		padding-right: 40px;
+		box-sizing: border-box;
+	}
+}
+
+.form-main__icon {
+	position: absolute;
+	right: 5px;
+	bottom: 40px;
+	width: 32px;
+	height: 32px;
+
+	svg {
+		opacity: .6;
+		display: block;
+		margin: 0 auto;
+		vertical-align: bottom;
+	}
+}
+
+input:hover + div,
+input:active + div,
+input:focus + div {
+	svg {
+		fill: @tiffany-form;
 	}
 }
 
@@ -380,6 +411,18 @@ input[type="text"] {
 		box-sizing: border-box;
 	}
 
+	.form-main__icon {
+		right: 55px;
+
+		&--phone {
+			bottom: 8px;
+		}
+
+		&--mail {
+			bottom: 58px;
+		}
+	}
+
 	.form-main__field--others {
 		textarea {
 			width: 100%;
@@ -472,6 +515,10 @@ input[type="text"] {
 
 	label {
 		-height: 50px;
+	}
+
+	.form-main__icon {
+		right: 235px;
 	}
 
 	.form-main__submit {
