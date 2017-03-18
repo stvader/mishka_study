@@ -6,7 +6,8 @@
 	<title>Mishka Study</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
-	<script src="js/js-menu-mobile.js"></script>	
+	<script src="js/js-menu-mobile.js"></script>
+
 </head>
 <body>
 	<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
@@ -239,8 +240,8 @@
 					<td>г. Санкт-Петербург, <br>ул. Большая Конюшенная, <br>д. 19/8, офис 101</td>
 				</tr>
 			</table>
-			<div class="contacts__map">
-				<picture>
+			<div class="contacts__map js-map">
+				<!--picture>
 					<source
 						media="(min-width: 1150px)"
 						srcset="img/map-desktop@2x.jpg 2x,
@@ -257,7 +258,7 @@
 					<svg width="66" height="100">
 						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-map-pin"></use>
 					</svg>
-				</div>	
+				</div-->	
 								
 			</div>
 			<a href="#" class="contacts__write-button  btn">Напишите нам</a>
@@ -298,5 +299,7 @@
 		</p>
 	</footer>
 	
+	<script src="js/js-map.js"></script>>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ_BZkeoo6WpZBuIzfm-T7sr0uSiwN2w8&callback=initMap"></script>
 </body>
 </html>

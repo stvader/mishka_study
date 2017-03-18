@@ -12,8 +12,7 @@ window.addEventListener('load', function() {
 			mainNav.classList.add('main-nav--closed');
 		}
 	}
-
-	console.log(mainNav);
+	
 	if (mainNav.classList.contains('main-nav--no-js')) {
 		mainNav.classList.remove('main-nav--no-js');
 	}	
