@@ -9,7 +9,23 @@
 		var svgMarker = 'img/icon-map-pin.svg';
 		var mapProp = {
 			center: officeCenter,
-			zoom: 17
+			zoom: 17,
+			disableDefaultUI: true,
+			zoomControl: true,
+			zoomControlOptions: {
+    			style: google.maps.ZoomControlStyle.DEFAULT 
+			},
+			mapTypeControl: true,
+			mapTypeControlOptions: {
+			    style: google.maps.MapTypeControlStyle.DEFAULT
+			}
+			/*panControl: true,
+		    
+		    mapTypeControl: true,
+		    scaleControl: true,
+		    streetViewControl: true,
+		    overviewMapControl: true,
+		    rotateControl: true*/
 		};
 		var map = new google.maps.Map(mapField, mapProp);
 		var marker = new google.maps.Marker({
